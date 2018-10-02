@@ -1,7 +1,8 @@
 
 #imprt jason here 
 import json 
-num_cookies = input("Hey fitness  pal how many chocolate Cokies did you had today ")
+num_cookies = float(input("Hey fitness  pal how many chocolate Cokies did you had today "))
+num_cookies = int(num_cookies)
 
 #calories per cooky
 calorie = 75
@@ -17,8 +18,8 @@ new_calorie = 75 * num_cookies
 new_fat = 3 * num_cookies
 new_cholesterol = 0 * num_cookies
 new_carbohydrates =12 * num_cookies
-new_fiber = 1.5 * num_cookies
-new_protein = 1.5 * num_cookies
+new_fiber = 2 * num_cookies
+new_protein = 2 * num_cookies
 
 
 #cokkie dictionary
