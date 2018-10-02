@@ -1,0 +1,83 @@
+•	How to program
+o	Patience
+o	Determination
+o	Instruction
+•	Assignments	 Social Network
+o	Registration – week 1
+o	Storing – week 2
+o	API –week 3
+o	Datasets – week four
+o	Scraping – week five
+•	The book
+o	Github
+o	Learn hu
+o	Slack
+o	Anaconda
+o	Jupyter notebook
+o	Terminal
+o	Assignment
+•	GUI’s are restrictive
+•	Close to the metal
+•	Reusability
+•	Performance
+•	Efficiency
+•	Batch action renaming
+•	Youtube-dl
+•	Backup a server every night
+
+Lesson 1
+
+Numbers and math
+print()
+Commenting
+Variable assignments
+Types: int, float, str, bool
+Type inference
+Type conversion
+input()
+Lesson 2
+
+Operators: <, >, ==, !=, in, and, or
+Control flow: if, else, elif
+quit()
+String concatenation
+String methods: .lower(), .upper(), count(), endswith(), etc.
+Getting the length of a string using len()
+
+Comparison in Python
+ Operator page
+•	Operators
+•	 Or  == ||
+•	and   ==  &&
+•	(strict ===) == is // don’t have in python
+
+String Methods 
+	String methods page
+	
+Lesson 3
+
+Lists
+Lists containing both strings and numbers
+Length of a list
+List Indexing
+List with input()
+List slicing
+List appending
+Checking if something is in a list (in operator)
+List methods (pop, sort, reverse, remove)
+
+-- Variable and memory in python
+memory address
+id function
+
+
+Lesson 4
+
+For loop (with range)
+Looping over lists
+Converting string to a list using split
+While loops
+Opening files
+Looping over the contents of a file
+Writing a file
+The CSV format
