@@ -48,7 +48,7 @@ Comparison in Python
  Operator page
 •	Operators
 •	 Or  == ||
-•	and   ==  &&
+•	and   ==  &&s
 •	(strict ===) == is // don’t have in python
 
 String Methods 
@@ -66,9 +66,18 @@ List appending
 Checking if something is in a list (in operator)
 List methods (pop, sort, reverse, remove)
 
--- Variable and memory in python
+-- Variables and memory in python
 memory address
 id function
+split .split("")
+ join
+
+ -- index and sa
+ index and enumerate, index,range
+ genreators
+ multidimetional list
+
+  	refactoring
 
 
 Lesson 4
@@ -80,4 +89,8 @@ While loops
 Opening files
 Looping over the contents of a file
 Writing a file
-The CSV format
+The CSV format/
+
+
+
+
