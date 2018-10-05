@@ -82,7 +82,7 @@ print("great to have you on e-buddy " + user_details["first_name"]+
 	"\n"+ " you weekkly value is " + user_value_str + " €"
 	+ "\n"+" here are you user prpfile details" )
 
-print(json.dumps(user_details,indent =4))
+print(json.dumps(user_details,indent =4))	
 print("enjoy the rest of you day " + user_details["first_name"]+" see you on e-buddy again soon !! ")
 
 
