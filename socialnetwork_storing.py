@@ -1,6 +1,9 @@
 #setup
 import datetime
 import json 
+import csv
+
+
 
 wkly_val_adv = 500
 now = datetime.datetime.now()
@@ -83,5 +86,43 @@ print("great to have you on e-buddy " + user_details["first_name"]+
 
 print(json.dumps(user_details,indent =4))	
 print("enjoy the rest of you day " + user_details["first_name"]+" see you on e-buddy again soon !! ")
+
+# here we are fix the wrting to thefile shit
+str_user_weeklky_value = str(user_details["user_weekly_value"])
+str_user_age = str(user_details["user_age"])
+user_data =  user_details["first_name"] + "," + user_details["user_lastname"] + "," + str_user_age + "," + str_user_weeklky_value+ "," + user_details["gender"] +"\n"
+
+#opening files for users  and writing
+write_user = open("../documents/user_details.csv", "w")
+write_user.write(user_data)
+write_user.close()
+
+#reading users file and  and print to screen
+users_details = open("../documents/user_details.csv", "r")
+for user in users_details:
+	print(user)
+users_details.close()
+
+
+
+#Your program must:
+
+#Read the provided csv file and convert the data to a multidimensional list (list with lists)
+#Print the contents of the list properly formatted with the index number (e.g. ‘0: Mark Rutte was born in 1967 and a member of the VVD party’) and also show how many people there are in the database.
+#Ask for four options: 
+#remove a person, 
+#add a person, save the 
+#database to csv or 
+#quit the program.
+
+#‘Remove a person’ should ask for an index number, and then remove that person from the list.
+#‘Add a person’ should ask for the same four fields that also exist in the original CSV file and add those to the list.
+#‘Save the database’ should save the modified list in the same format in the original file so that whenever the program is quit and run again the mutations done in the program are properly reflected in the file. Alternatively, the list should be saved whenever the user 'removes' or 'adds' a person.
+#The program should indefinitely provide the four options again after an action is completed until the use chooses the 'quit the program' option.
+#Your program must also:
+
+#Be properly commented.
+#Be executable using the python interpreter from the command line (e.g. ‘python assignment-2.py’) 
+
 
 

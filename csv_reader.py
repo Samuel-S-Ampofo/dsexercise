@@ -18,12 +18,10 @@ for foootballer in footballers_doc:
 		"players_worth":player_worth
 		})
 
-
 	write_footballer.write(footballers_details["player_name"] + " plays for " +
 		  footballers_details["player_club"] + " and was bought for " + 
 		  footballers_details["players_worth"] + "million"
 		 )
-
 footballers_doc.close()
 
 

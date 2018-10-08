@@ -75,3 +75,26 @@ Opening files
 Looping over the contents of a file
 Writing a file
 The CSV format
+
+
+Lesson 4s
+Dicts
+Dict indexing
+Replacing values in a dict
+Dict methods: keys(), values(), get()
+Lists with dicts with lists with dicts, wow
+Looping over dicts using items()
+
+new lines = line.split(" ")
+player = line[0].strip()
+club = line[1].strip()
+value = ;ine[2].strip
+
+
+F-trings
+intreplation
+Scope
+CSV
+JSON
+dictionaries
+
