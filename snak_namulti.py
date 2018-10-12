@@ -4,9 +4,8 @@
 friend1 =["John"]
 friend2 =["emmanuel"]
 friend3 =["james"]
-
-# nested list
 friends_snacks = [friend1,friend2,friend3]
+
 
 for friend in friends_snacks:
 	namesnack = input("what is the favorite snack of " +" "+ friend[0]+" ")

@@ -31,7 +31,6 @@ cookie_calories = {
   "Fiber": new_fiber,
   "Protein": new_protein
 }
-
 #print commands
 print("Hey fittnes pal today you had " + " " + amount_cookies + " Chocolate cookies this is equivalenet to " )
 print(json.dumps(cookie_calories,indent =4))

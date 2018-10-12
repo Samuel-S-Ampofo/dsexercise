@@ -9,7 +9,8 @@ for name in myfriend:
     namesnack = input("what is the favorite snack of " +" "+ name+" ")
     frinds_snack.append(namesnack)
     print(name + " likes " + namesnack) 
-    
+print("*" * 20)
+  
 for name in myfriend:
     index = 0
     index = index + 1

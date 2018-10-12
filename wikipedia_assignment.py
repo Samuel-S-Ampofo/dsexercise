@@ -1,37 +1,31 @@
 import requests
 import json
 
-#get a user inpute
-#get the request
-#loads the json
-#json becomes the dicttioanary
-#find the lanuguage and display the various languages type.
-#check for errors 404
+user_text = input("type here what you want to search on wikipedia : ")
+user_text = user_text.split(' ')
 
-# display exmaple images in jupyta notebook
-#wikipedia action api
-# rest #https://en.wikipedia.org/api/rest_v1/page/summary/Amsterdam
+user_search = '_'.join(map(str,user_text)).title()
+search_link = f'https://en.wikipedia.org/api/rest_v1/page/summary/{user_search}'
+nl_search_link = f'https://nl.wikipedia.org/api/rest_v1/page/summary/{user_search}'
+zh_search_link = f'https://es.wikipedia.org/api/rest_v1/page/summary/{user_search}'
 
+serach_list = [search_link,nl_search_link,zh_search_link] 
 
+#search link
+for link in serach_list:
+	req_rturn = requests.get(link)
 
-#Exercise: Wikipedia extracts
+	if req_rturn.status_code != 200:
+			print("oops you have a back network thing here")
+			exit()
+	#loading wiki json dat
+	search_data = json.loads(req_rturn.text)
+	nl = "\n"
 
-#Create a program that asks for the name of an article and uses the Wikipedia REST API to get the short description and extract of that article.
-
-#Import the requests and json libraries
-#Ask the user for an article and strip it and replaces the spaces with underscores (_)
-#Format the API endpoint with the article
-#Use requests.get() to get the data
-#Check if we got a 200 status code, otherwise abort the program
-#Display the title of the article, description and extract
-#Extend your program
-
-#Instead of just showing the description and extract in one language, show it in three languages of your choice.  For a list of all Wikipedia language editions with their respective codes ('en', 'es', 'nl', etc.) check this list.
-#Look at the JSON output in a webbrowser, maybe you can display more interesting properties (for example, latitude and longitude).
-#Tips
-
-#Everything you need for this exercise is in the ‘lesson 6’ chapters of the examples-3 Jupyter Notebook.
-#Use the replace() method to replace spaces with strings.
-#Use json.loads() to convert the text of the GET request to a dictionary
-#Assigning the dictionary values to a variable (e.g. extract = data["extract"]) is handy here.
-#Again, F-strings are very useful in this program
+	for key in search_data:
+		article_tittle = search_data["title"]
+		article_description = search_data["description"]
+		article_extract = search_data["extract"]
+	print(f'{nl}')
+	print("------------ Hers is the text from your wiki search ------------")
+	print(f'{nl}{nl}Tittle: {article_tittle}{nl}{nl}Description: {article_description}{nl}{nl}Extract: {article_extract}')

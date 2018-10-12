@@ -1,7 +1,7 @@
 
 #name of lovers
-your_name =  str(input("Enter name of person one")) 
-partner_name = str( input("Enter name of person two")) 
+your_name =  str(input("Enter name of person one :")) 
+partner_name = str( input("Enter name of person two :")) 
 
 #convert to lowercase
 lover1 = your_name.lower()

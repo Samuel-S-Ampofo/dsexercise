@@ -6,6 +6,7 @@ footballers_doc = open("../documents/footballers.csv", "r")
 write_footballer = open("../documents/new_footballers.csv", "w")
 footballers_details ={}
 
+
 for foootballer in footballers_doc:
 	players_info = foootballer.split(",")
 	player_name = players_info[0]
@@ -18,10 +19,16 @@ for foootballer in footballers_doc:
 		"players_worth":player_worth
 		})
 
+	print(footballers_details["player_name"] + " plays for " +footballers_details["player_club"] + " and was bought for " +footballers_details["players_worth"] + "million")
+
+#writing to csv to make this work you must creta new folder document and access with ../document
 	write_footballer.write(footballers_details["player_name"] + " plays for " +
 		  footballers_details["player_club"] + " and was bought for " + 
-		  footballers_details["players_worth"] + "million"
+		  footballers_details["players_worth"] + " million "
 		 )
+	print()
 footballers_doc.close()
+
+
 
 
