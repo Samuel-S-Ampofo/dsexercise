@@ -7,4 +7,4 @@ new_user_word = user_word.split(" ")
 for word in new_user_word:
 	if word in wordlist:
 		print(word)
-		print(" Warnning " + word + " is a continete that is fobbiden WRONG WORD!!! in the the list ")
+		print(" Warnning " + word + " is a continent that is fobbiden WRONG WORD!!! in the the list ")
