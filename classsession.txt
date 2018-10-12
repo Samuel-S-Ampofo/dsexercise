@@ -90,11 +90,21 @@ player = line[0].strip()
 club = line[1].strip()
 value = ;ine[2].strip
 
-
 F-trings
 intreplation
 Scope
 CSV
 JSON
 dictionaries
+
+Lesson 5
+Stateless rest api
+HTTP protocole
+Url and http are diifrent
+
+protocole subdomain path query fragmenets
+
+
+
+
 

@@ -104,7 +104,6 @@ for user in users_details:
 users_details.close()
 
 
-
 #Your program must:
 
 #Read the provided csv file and convert the data to a multidimensional list (list with lists)

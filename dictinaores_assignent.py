@@ -5,29 +5,47 @@ import json
 my_movie = {"title": "The Lord of the Rings",
 		    "year": "2001",
 		    "duration":192,
-		    "director ":"Peter Jackson",
+		    "director ": "Peter Jackson",
 		    }
 
 for key in my_movie:
-	if my_movie[key] == "duration":
-		value = f"{value} munites"
-	print(key, my_movie[key])
+	print(key,my_movie[key])
+#user can update the actors list in my movie and 
+actors_names = input(" add actors list by names of  actors seperated by commas ")
+movie_actors = actors_names.split(',')
+my_movie.update({"actors":movie_actors})
+print(my_movie["actors"])
 
-# 
-movie_tittle = input("what the tittle of your movie ")
+for key in my_movie:
+	if key == "duration":
+		my_movie[key] = f"{my_movie[key]} munites"
+	if key == "actors":
+		my_movie[key] = ''.join(map(str, my_movie[key]))
+	print(key,my_movie[key])
+
+print("now let's do some magice with you favorite movie")
+
+#personal addition takes user details and print an f string
+movie_details ={}
+user_name = input("whats your name ")
+movie_tittle = input("what's the tittle of your favorite movie ")
 movie_year = input("what the release year of your movie ")	
 movie_duration = input("what the duration of your movie ")
 movie_director = input("who is the director of your movie ")
 
-movie_details ={}
-movie_details.update(
-		{"title": movie_tittle,
-		"year": movie_year,
-		"duration ":movie_duration,
-		"director ":movie_director,
+movie_details.update({"user": user_name,
+		 "title": movie_tittle,
+		 "year": movie_year,
+		 "duration": movie_duration,
+		 "director": movie_director,
 		})
+for key in movie_details:
+	if key == "duration":
+		movie_details[key] = f"{movie_details[key]} munites"
+	print(key,movie_details[key])
+print(f'"hey !! {movie_details["user"]} your favorite movie is {movie_details["title"]} it was realeased in {movie_details["year"]}  it last {movie_details["duration"]} and was  directed by {movie_details["director"]}')
 
-user_string = " 	"
-print("here are the details of your movvie")
-print(json.dumps(movie_details,indent =4))	
+print("here are the details of your movie")
+print(json.dumps(movie_details,indent =4))
+
 
