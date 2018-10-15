@@ -5,6 +5,7 @@ frinds_snack = []
 
 for name in myfriend:
     print(name)
+    print(len(name))
     # print(myfriend.index(name))
     namesnack = input("what is the favorite snack of " +" "+ name+" ")
     frinds_snack.append(namesnack)
