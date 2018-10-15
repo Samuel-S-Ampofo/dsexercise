@@ -18,14 +18,14 @@ for link in serach_list:
 	if req_rturn.status_code != 200:
 			print("oops you have a back network thing here")
 			exit()
-	#loading wiki json dat
-	search_data = json.loads(req_rturn.text)
-	nl = "\n"
+	else:#loading wiki json data
+		search_data = json.loads(req_rturn.text)
+		nl = "\n"
 
-	for key in search_data:
-		article_tittle = search_data["title"]
-		article_description = search_data["description"]
-		article_extract = search_data["extract"]
-	print(f'{nl}')
-	print("------------ Hers is the text from your wiki search ------------")
-	print(f'{nl}{nl}Tittle: {article_tittle}{nl}{nl}Description: {article_description}{nl}{nl}Extract: {article_extract}')
+		for key in search_data:
+			article_tittle = search_data["title"]
+			article_description = search_data["description"]
+			article_extract = search_data["extract"]
+		print(f'{nl}')
+		print("------------ Hers is the text from your wiki search ------------")
+		print(f'{nl}{nl}Tittle: {article_tittle}{nl}{nl}Description: {article_description}{nl}{nl}Extract: {article_extract}')

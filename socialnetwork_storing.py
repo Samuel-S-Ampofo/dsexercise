@@ -15,7 +15,7 @@ user_details ={
 
 #userdaitails setup firstname
 print("hey!!! Buddy welcome to e-buddy"+ "\n" + "let get you setup so you can to connect with you buddies online")
-user_firstname = input(" let's begin with your first name ")
+user_firstname = input("let's begin with your first name:")
 firstname_lower = user_firstname.lower()
 user_details.update({"first_name" : firstname_lower })
 print ( " hey !! " + user_details["first_name"] + " great to have you on e-budy")

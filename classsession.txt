@@ -101,8 +101,9 @@ Lesson 5
 Stateless rest api
 HTTP protocole
 Url and http are diifrent
-
 protocole subdomain path query fragmenets
+
+Lesson 7
 
 
 

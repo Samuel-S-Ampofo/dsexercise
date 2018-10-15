@@ -7,8 +7,7 @@ now = datetime.datetime.now()
 my_familyname = "ampofo"
 current_year = now.year
 user_minage = 18
-user_details ={
-}
+user_details ={}
 
 #userdaitails setup firstname
 print("hey!!! Buddy welcome to e-buddy"+ "\n" + "let get you setup so you can to connect with you buddies online")
@@ -45,7 +44,7 @@ else :
 	user_details.update({"user_age_value" : 20})
 
 #userdaitails setup lasttname and comparis to my last name
-user_gender = input(" what's your gender  " + user_details["first_name"] + " male or female ")
+user_gender = input(" what's your gender  " + user_details["first_name"] + " male or female: ")
 user_gender_lower = user_gender.lower()
 user_details.update({"gender" : user_gender_lower})
 print( " you are " + user_details["gender"])
@@ -64,12 +63,9 @@ user_details.update({"internet_profile-weekly" : int_pro_wkly})
 print("your weekly average hours online  for social connection is ")
 
 # value for advertise
-#females have a factor of 2 and male beuse they have a wide scope of inflluence
-#males have an influenece scope of 1
-# value for advertiser is 
-#age value multiplied by gender value
+#male 1  and females have a factor of 2 and because they have a wide scope of inflluence
+# value for advertiser is age value multiplied by gender value
 # plus percentage of weekly hours onlne 
-
 gen_age_value = user_details["internet_profile-weekly"] * user_details["user_gender_value"]
 internet_pro_per = round(user_details["internet_profile-weekly"])
 user_weekly_score = gen_age_value + internet_pro_per
@@ -77,9 +73,10 @@ user_weekly_value = round(user_weekly_score/100 * wkly_val_adv)
 user_details.update({"user_weekly_value" : user_weekly_value})
 user_value_str = str(user_details["user_weekly_value"])
 
+
 print("great to have you on e-buddy " + user_details["first_name"]+
 	"\n"+ " you weekkly value is " + user_value_str + " €"
-	+ "\n"+" here are you user prpfile details" )
+	+ "\n"+" here are your user prpfile details" )
 
 print(json.dumps(user_details,indent =4))	
 print("enjoy the rest of you day " + user_details["first_name"]+" see you on e-buddy again soon !! ")
