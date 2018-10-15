@@ -21,7 +21,7 @@ for foootballer in footballers_doc:
 
 	print(footballers_details["player_name"] + " plays for " +footballers_details["player_club"] + " and was bought for " +footballers_details["players_worth"] + "million")
 
-#writing to csv to make this work you must creta new folder document and access with ../document
+#writing to csv to make this work you must creat new folder documents and access with ../document
 	write_footballer.write(footballers_details["player_name"] + " plays for " +
 		  footballers_details["player_club"] + " and was bought for " + 
 		  footballers_details["players_worth"] + " million "
