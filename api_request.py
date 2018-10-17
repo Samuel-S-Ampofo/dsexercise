@@ -58,7 +58,8 @@ article_search(user_search,json_data,user_lang)
 #print(p1.age)
 
 
-def arealted_search(rticle,langdata,lang):
+def arealted_search(related_list,langdata,lang):
+	fo
 	print('hello world')
 
 #wikipedia python api module install// personal additions
@@ -84,9 +85,8 @@ def arealted_search(rticle,langdata,lang):
 #Check if there’s a coordinate in the page, and if so, extract the ‘lat’ and ‘lon’ properties. 
 #Add those to the Google Maps website (‘http://maps.google.com/?q=....’) 
 #and print the URL so people can click on it. If there’s no coordinate, print an error message.
-#Query the Wikipedia related API for articles related to the original article
-
 #ddo this part later here **********************************************
+#Query the Wikipedia related API for articles related to the original article
 #(https://en.wikipedia.org/api/rest_v1/#!/Page_content/getRelatedPages) 
 #using the same methods as you did for the summary (so return an error when you don’t get a 200, etc.).
 #Create a new list and from the first three related results append a dict with the title, description and url to the desktop version of the related article to that list.

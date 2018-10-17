@@ -105,6 +105,15 @@ protocole subdomain path query fragmenets
 
 Lesson 7
 
+pandas
+
+Lesson 8
+
+debuging
+readit-api
+
+
+
 
 
 
