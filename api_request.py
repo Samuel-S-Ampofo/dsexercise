@@ -1,6 +1,8 @@
 #imprts start here
 import requests
 import json
+import pprint
+
 # imprt ipython module for html and image
 
 #user query and information formating
@@ -19,48 +21,73 @@ def article_search(article,langdata,lang):
 	for key in langdata:
 		if  lang == langdata[key]["name"]:
 			lang_code = key
+
 	search_url = f'https://{lang_code}.wikipedia.org/api/rest_v1/page/summary/{article}'		
 	print(search_url)
-
 	req_rturn = requests.get(search_url)
 
 	if req_rturn.status_code != 200:
 			print("oops you have a back network thing here")
 			exit()
-	#loading wiki json dat
+
 	search_data = json.loads(req_rturn.text)
 	nl = "\n"
+	#global and local scope was a hug problem here
+	article_cordinates = "sorry article has no cordinates"
+	article_thumbnail = "sorry article has no thumbnail"
 
 	for key in search_data:
-		print(key,search_data[key])
 		article_tittle = search_data["title"]
 		article_description = search_data["description"]
 		article_extract = search_data["extract"]
-		article_thumbnail = search_data["thumbnail"]
-		arcticle_cordinates = search_data["coordinates"]
+		if  key == "thumbnail":	
+			article_thumbnail = search_data["thumbnail"]
+			print(article_thumbnail["source"])
+			print(article_thumbnail["width"])
+			print(article_thumbnail["height"])
+
+
+		if  key == "coordinates":	
+			article_cordinates = search_data[key]
+			print(search_data[key])
+		
 	print(f'{nl}')
-	print("------------ Hers is the text from your wiki search ------------")
+	print("------------ Here is the text from your wiki search ------------")
 	print(f'{nl}{nl}Tittle: {article_tittle}{nl}{nl}Description:{article_description}{nl}{nl}Extract: {article_extract}')
-	print(f'{nl}{nl}Thumnail link: {article_thumbnail }{nl}{nl}cordinates: {arcticle_cordinates}{nl}{nl}')
+	print(f'{nl}{nl}Thumnail link: {article_thumbnail}{nl} {nl} cordinates: {article_cordinates}')
 
 article_search(user_search,json_data,user_lang)
 
-#printing realted links functions
 
-#class Person:
- # def __init__(self, name, age):
-   # self.name = name
-   # self.age = age
+def related_search(related_list,langdata,lang):
+	for key in langdata:
+		if  lang == langdata[key]["name"]:
+			rlt_lang_code =  key
 
-#p1 = Person("John", 36)
+	related_srch = f'https://{rlt_lang_code}.wikipedia.org/api/rest_v1/page/related/{related_list}'		
+	print(related_srch)
+	req_related = requests.get(related_srch)
 
-#print(p1.name)
-#print(p1.age)
+	if req_related.status_code != 200:
+			print("oops you have a back network thing here")
+			exit()
+	rlt_search_data = json.loads(req_related.text)
+	nl = "\n"
+	rlt_short = rlt_search_data["pages"][0:3]
+	
 
+	for rtl_details in rlt_short:
+		for items in rtl_details:
+			rtl_tittle = rtl_details["title"]
+			rtl_description = rtl_details["description"]
+			rtl_des_url = rtl_details["content_urls"]["desktop"]["page"]
+		pprint.pprint(f'Tittle :{rtl_tittle}')
+		pprint.pprint(f'Description :{rtl_description}')
+		pprint.pprint(f'Destop url :{rtl_des_url}')
+	print(related_list)
+	print(lang)
+related_search(user_search,json_data,user_lang)
 
-def arealted_search(related_list,langdata,lang):
-	fo
-	print('hello world')
 
 #wikipedia python api module install// personal additions
 
