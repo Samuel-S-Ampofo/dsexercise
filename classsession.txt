@@ -104,14 +104,17 @@ Url and http are diifrent
 protocole subdomain path query fragmenets
 
 Lesson 7
-
 pandas
 
 Lesson 8
-
 debuging
 readit-api
 
+Lesson 8
+Read api
+read it plots
+Functions 
+Webscrapping
 
 
 
