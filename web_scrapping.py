@@ -5,6 +5,8 @@ import pandas as pd
 with open("../documents/Humphrey's 3-course menu - Humphrey's Restaurants.html") as f:
     page = BeautifulSoup(f, "lxml")
 
+ # url of the webiste you can save it and chnage the path https://humphreys.nl/en/3-course-menu/    
+
 #selecting the pages
 title = page.select("title")
 header_text = page.select("h1")
