@@ -111,10 +111,19 @@ debuging
 readit-api
 
 Lesson 8
-Read api
-read it plots
-Functions 
-Webscrapping
+-------------
+Read api not done
+read it plots not done
+------------
+Functions  - done
+Webscrapping --
+
+---------------
+4.1. Registration - done
+4.2. Storing done
+4.3. API-done ipyton
+4.4. Dataset - not done
+4.5. Scraping - not done
 
 
 

@@ -33,7 +33,7 @@ def article_search(article,langdata,lang):
 
 	search_data = json.loads(req_rturn.text)
 	nl = "\n"
-
+	returns
 	for key in search_data:
 		article_desktop = search_data["content_urls"]["desktop"]["page"]
 			
