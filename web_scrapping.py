@@ -46,9 +46,6 @@ df.to_csv("../documents/humphrey.csv")
 
 #for item in items:
     #print(item.get_text())
-
-
-
 #pyhton
 #html
 #beautifull soup
