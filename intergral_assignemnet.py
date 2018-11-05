@@ -7,8 +7,8 @@ import pprint
 user_details  = {
 					"search_info":{"ex_market":[],
 								   "assets":[]
-									 }
-								   }
+									}
+				}
 n_line = "\n"
 
 print("hey ! Bit investor welcome to a wonderfull trading day lets atrt with some basics")
@@ -61,7 +61,7 @@ if user_query == 'exchanges':
 		if item["exchange_id"] == specific_query:
 			print(f"-----------here is your information on {specific_query} -----------")
 			pprint.pprint(item)
-		user_details["search_info"]["ex_market"].append(specific_query)
+	user_details["search_info"]["ex_market"].append(specific_query)
 
 if user_query == 'assets':
 	specific_query =  input(f"type here id assest you want information on {n_line} This can be found in the asset id column: ")
